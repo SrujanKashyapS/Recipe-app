@@ -16,6 +16,7 @@ const CategoryPage = () => {
             }catch(error){
                 setError(error.message || "Error loading category");
             }
+            fetchCategoryData();
         }
         fetchItems()
     },[category]);
