@@ -11,12 +11,13 @@ const CategoryPage = () => {
         const fetchItems=async()=>{
             setLoading(true);
             try{
-                const response= await axios.get(`http://localhost:5000/api/items/${category}`);
+                const response= await axios.get(`http://localhost:5000/api/categories/${category}`);
                 setItems(response.data);
             }catch(error){
                 setError(error.message || "Error loading category");
             }
         }
+        fetchItems()
     },[category]);
   return (
     <div>

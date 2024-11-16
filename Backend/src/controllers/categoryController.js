@@ -1,5 +1,5 @@
 const Category = require('../models/categoryModel');
-const Item = require('../models/itemModel');
+const Item = require('../models/Itemodel');
 
 const getCategory = async (req, res) => {
     const {category} = req.params;

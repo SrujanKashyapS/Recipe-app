@@ -20,7 +20,7 @@ async function main() {
 main().then(()=> console.log("MongoDB connected successfully!")).catch(err => console.log(err));
 
 const ItemRoutes = require('./src/routes/itemRoutes');
-const CategoryRoutes= require('./src/routes/categoryRoutes');
+const CategoryRoutes= require('../Backend/src/routes/categoryRoute')
 app.use('/api',ItemRoutes);
 app.use('/api',CategoryRoutes);
 
