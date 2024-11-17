@@ -8,6 +8,8 @@ const Home = () => {
         <Hero/>
         <CategoryWrapper/>
       </div>
+
+    
     </div>
   )
 }
