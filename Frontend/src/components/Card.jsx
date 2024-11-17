@@ -1,11 +1,12 @@
 import { get } from 'mongoose';
 import React from 'react'
+import { GoClock } from "react-icons/go";
 const Card = () => {
     const categoryStyles = {
         Entrees: {backgroundColor: '#f0f5c4' , color:'#59871f'},
         Breakfast: {backgroundColor: '#efedfa' , color:'#3c3a8f'},
         Lunch: {backgroundColor: '#e5f7f3' , color:'#1f8787'},
-        Dessert: {backgroundColor: '"#e8f5fa' , color:'#397a9e'},
+        Dessert: {backgroundColor: '#e8f5fa' , color:'#397a9e'},
         Sides: {backgroundColor: '#feefc9' , color:'#d16400'},
         Drinks: {backgroundColor: '#ffeae3' , color:'#f049e3'},
         default: {backgroundColor: '#fff' , color:'#000'}
@@ -24,14 +25,23 @@ const Card = () => {
                 <Link to={`/item/${item._id}`}>
                 <h1 className="text-gray-700 font-bold text-2xl mb-8 hover:text-gray-900 hover:cursor-pointer">{item?.name}</h1>
                 </Link>
-                <div>
-                    <button className={'mt-6 py-2 px-4 font-medium rounded-lg shadow-md hover:shadow-lg transition duration-300 '}>{item?.category}
+                <div className='flex justify-between items-center flex--wrap'>
+                    <button className={'mt-6 py-2 px-4 font-medium rounded-lg shadow-md hover:shadow-lg transition duration-300 '}
                         style={{
                             backgroundColor: categoryStyle.backgroundColor,
                             color: categoryStyle.color,
                         }}
+                        >{item?.category}
                     </button>
+                    <div classname='flex items-center py-2 mt-6'>
+                        <GoClock/>
+                        <span>{item?.more.prep_time}</span>
+                    </div>
+
                 </div>
+            </div>
+            <div className='absolute top-2 right-2 py-2 px-4 bg-white rounded-lg'>
+                <span className='font-medium'>{item?.more.difficulty}</span>
             </div>
         </div>
 
