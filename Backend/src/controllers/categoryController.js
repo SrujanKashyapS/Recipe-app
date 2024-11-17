@@ -12,7 +12,7 @@ const getCategory = async (req, res) => {
         const items = await Item.find({menuId: categoryData.menuId})
         res.status(200).json({items})
     } catch (error) {
-        res.status(500).json({message: "No Category found"})
+        res.status(500).json({message: "No Category specified!"})
     }}
 
     module.exports = {getCategory}

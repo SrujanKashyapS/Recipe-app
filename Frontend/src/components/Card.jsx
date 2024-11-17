@@ -1,6 +1,7 @@
 import { get } from 'mongoose';
 import React from 'react'
 import { GoClock } from "react-icons/go";
+
 const Card = () => {
     const categoryStyles = {
         Entrees: {backgroundColor: '#f0f5c4' , color:'#59871f'},
