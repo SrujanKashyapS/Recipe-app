@@ -9,7 +9,7 @@ const Home = () => {
         <Hero/>
         <CategoryWrapper/>
       </div>
-
+      <featuredpage/>
     
     </div>
   )
