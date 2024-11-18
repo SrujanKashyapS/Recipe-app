@@ -1,8 +1,9 @@
 import { get } from 'mongoose';
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { GoClock } from "react-icons/go";
 
-const Card = () => {
+const Card = ({item}) => {
     const categoryStyles = {
         Entrees: {backgroundColor: '#f0f5c4' , color:'#59871f'},
         Breakfast: {backgroundColor: '#efedfa' , color:'#3c3a8f'},
@@ -18,7 +19,7 @@ const Card = () => {
     };
     const categoryStyle = getCategoryStyle(item?.category);
     return (
-    <div className='container nx-auto flex justify-center md:justify-start'>Card
+    <div className='container nx-auto flex justify-center md:justify-start'>
     <div className='max-w-sm'>
         <div className='bg-white relative shadow-lg hover:shadow-xl transition duration-500 rounded-lg'>
             <img src={item?.thumbnail_image} alt="thumbnail_image" className='rounded-t-lg' />
@@ -34,7 +35,7 @@ const Card = () => {
                         }}
                         >{item?.category}
                     </button>
-                    <div classname='flex items-center py-2 mt-6'>
+                    <div className='flex items-center py-2 mt-6'>
                         <GoClock/>
                         <span>{item?.more.prep_time}</span>
                     </div>

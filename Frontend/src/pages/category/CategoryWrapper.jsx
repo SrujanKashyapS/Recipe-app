@@ -21,7 +21,7 @@ function CategoryList () {
             <CategoryItem name="entrees" href="/categories/entrees" background="#f0f5c4" color="#59871f"/>
             <CategoryItem name="breakfast" href="/categories/breakfast" background="#efedfa" color="#3c3a8f"/>
             <CategoryItem name="lunch" href="/categories/lunch" background="#e5f7f3" color="#1f8787"/>
-            <CategoryItem name="dessert" href="/categories/dessert" background="#e8f5fa" color="#397a9e"/>
+            <CategoryItem name="desserts" href="/categories/desserts" background="#e8f5fa" color="#397a9e"/>
             <CategoryItem name="sides" href="/categories/sides" background="#feefc9" color="#d16400"/>
             <CategoryItem name="drinks" href="/categories/drinks" background="#ffeae3" color="#f049e3"/>
         </div>
