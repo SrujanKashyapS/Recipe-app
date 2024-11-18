@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import Card from '../components/Card';
 import { IoSearchSharp } from "react-icons/io5";
+import CategoryWrapper from './category/CategoryWrapper';
 
 const Search = () => {
   const searchText = useParams();
@@ -47,6 +48,7 @@ const Search = () => {
             <input value={query} onChange={handleSearch} type='search' placeholder='Search for a Recipe' className='outline-none w-full placeholder:text-[#1b2629]' 
             id='search' required=""/>
       </div>
+      <CategoryWrapper/>
         {loading && <div>Loading...</div>}
         {error && <div>Unknown error happens...{error}</div>}
         <ul className='mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
