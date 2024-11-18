@@ -30,8 +30,8 @@ const Card = ({item}) => {
                 <div className='flex justify-between items-center flex--wrap'>
                     <button className={'mt-6 py-2 px-4 font-medium rounded-lg shadow-md hover:shadow-lg transition duration-300 '}
                         style={{
-                            backgroundColor: categoryStyle.backgroundColor,
-                            color: categoryStyle.color,
+                            backgroundColor: categoryStyles.backgroundColor,
+                            color: categoryStyles.color,
                         }}
                         >{item?.category}
                     </button>

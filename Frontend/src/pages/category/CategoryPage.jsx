@@ -31,7 +31,7 @@ const CategoryPage = () => {
 
         <ul className='mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
           {
-            items && items?.map(item => (
+            Array.isArray(items) && items?.map(item => (
               <Card item={item} key={item._id}/>
             ))
           }
