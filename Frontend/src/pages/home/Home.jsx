@@ -1,6 +1,5 @@
 import Hero from "../../components/Hero"
 import CategoryWrapper from "../category/CategoryWrapper"
-import featuredpage from "../home/FeaturedSection"
 
 const Home = () => {
   return (
@@ -9,7 +8,6 @@ const Home = () => {
         <Hero/>
         <CategoryWrapper/>
       </div>
-      <featuredpage/>
     
     </div>
   )
