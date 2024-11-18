@@ -28,6 +28,11 @@ const router = createBrowserRouter([
       {
         path: "/search",
         element: <Search/>
+      },
+      {
+        path: "/items/:id",
+        element: <SingleItem/>,
+        loader: ({params}) => fetch(`http://localhost:5000/api/items/${params.id}`)
       }
     ]
   },
