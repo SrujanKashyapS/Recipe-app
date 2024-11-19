@@ -11,9 +11,6 @@ import Home from './pages/home/home.jsx'
 import CategoryPage from './pages/category/CategoryPage.jsx';
 import Search from './pages/Search.jsx';
 import { element } from 'prop-types';
-import SingleProduct from './components/SingleProduct.jsx';
-import Recipes from './components/Recipes.jsx';
-import Resources from './components/Resources.jsx';
 
 const router = createBrowserRouter([
   {
@@ -48,7 +45,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/about",
-        // element: <About/>
+        element: <About/>
     }
     ]
   },
