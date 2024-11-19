@@ -11,7 +11,6 @@ import Home from './pages/home/home.jsx'
 import CategoryPage from './pages/category/CategoryPage.jsx';
 import Search from './pages/Search.jsx';
 import { element } from 'prop-types';
-import SingleProduct from './components/SingleProduct.jsx';
 import Recipes from './components/Recipes.jsx';
 import Resources from './components/Resources.jsx';
 import About from './pages/about/About.jsx';
@@ -19,43 +18,37 @@ import Contacts from './pages/contact/Contacts.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home />
       },
       {
         path: "/categories/:category",
-        element: <CategoryPage/>
+        element: <CategoryPage />
       },
       {
         path: "/search",
-        element: <Search/>
+        element: <Search />
       },
-
-    {
-        path: "/items/:id",
-        element: < SingleProduct/>,
-        loader: ({params}) => fetch=('https://localhost:5000/api/products/${params.id}'),
-    },
-    {
-        path : "/recipes",
-        element: <Recipes/>
-    },
-    {
+      {
+        path: "/recipes",
+        element: <Recipes />
+      },
+      {
         path: "/resources",
-        element: <Resources/>
-    },
-    {
+        element: <Resources />
+      },
+      {
         path: "/about",
-        element: <About/>
-    },
-    {
-      path: "/contact",
-      element: <Contacts/>
-  }
+        element: <About />
+      },
+      {
+        path: "/contact",
+        element: <Contacts />
+      }
     ]
   },
 ]);
