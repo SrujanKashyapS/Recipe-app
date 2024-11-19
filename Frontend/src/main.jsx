@@ -14,7 +14,8 @@ import { element } from 'prop-types';
 import SingleProduct from './components/SingleProduct.jsx';
 import Recipes from './components/Recipes.jsx';
 import Resources from './components/Resources.jsx';
-
+import About from './pages/about/About.jsx';
+import Contacts from './pages/contact/Contacts.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -49,8 +50,12 @@ const router = createBrowserRouter([
     },
     {
         path: "/about",
-        // element: <About/>
-    }
+        element: <About/>
+    },
+    {
+      path: "/contact",
+      element: <Contacts/>
+  }
     ]
   },
 ]);
