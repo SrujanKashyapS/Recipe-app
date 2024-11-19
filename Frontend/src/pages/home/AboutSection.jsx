@@ -1,5 +1,5 @@
-import React from 'react'
-// import AboutImg from "../../assets/featured.webp" add imgage 
+ import React from 'react'
+import AboutImg from "../../../public/cooking.png"
 const AboutSection = () => {
   return (
     <div className="overflow-hidden flex md:flex-row flex-col justify-between items-center sm:my20 my-4 md:gap-20 gap-12 px-5 lg:px-10">
@@ -22,7 +22,7 @@ const AboutSection = () => {
       </div>
     </div>
     <div className="relative">
-//featured image add
+      <img src={AboutImg} alt="About Image" className='rounded-md'/>
     </div>
     </div>  )
 }
