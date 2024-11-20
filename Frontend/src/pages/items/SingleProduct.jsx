@@ -1,15 +1,9 @@
 import React from 'react'
 import { useLoaderData } from 'react-router-dom'
 
-const SingleItem = () => {
+const SingleProduct = () => {
     const item = useLoaderData();
-    const extractNumber = (timeString) => {
-        let timeArray = timeString.split(" ");
-        return parseInt(timeArray[0])
-    }
-    let prepTime = extractNumber(item?.more.prep_time);
-    let cookTime = extractNumber(item?.more.cook_time);
-    const totalTime = prepTime + cookTime
+    
   return (
     <section className='min-h-dvh md:flex justify-center items-center md:bg-eggshell'>
         <article>
@@ -25,7 +19,7 @@ const SingleItem = () => {
                         <ul className='list-disc mt-3 ml-8 text-lg marker:text-orange-500'>
                             <li className='pl-3'>
                                 <p>
-                                    <span>Time:</span> <span>{totalTime} minutes</span>
+                                    <span>Time:</span> <span> minutes</span>
                                 </p>
                             </li>
                             <li className='pl-3 mt-3'>
@@ -60,4 +54,4 @@ const SingleItem = () => {
   )
 }
 
-export default SingleItem
+export default SingleProduct

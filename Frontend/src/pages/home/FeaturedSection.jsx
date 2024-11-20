@@ -1,5 +1,5 @@
 import React from "react";
-import FeaturedImg from "../../../public/pineapple-pizza.png"
+import FeaturedImg from "/pineapple-pizza.png"
 const FeaturedSection = () => {
   return (
     <div className="overflow-hidden flex md:flex-row flex-col justify-between items-center sm:my20 my-4 md:gap-20 gap-12 px-5 lg:px-10">

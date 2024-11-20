@@ -5,9 +5,9 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className='mx-auto max-w-screen-lg'>
+    <div className='max-w-screen-lg mx-auto'>
       <Header/>
-     <Outlet/>
+     <div className='min-h-[calc(100vh-136px)]'><Outlet/></div>
      <Footer/>
     </div>
   )

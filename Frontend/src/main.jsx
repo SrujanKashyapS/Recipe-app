@@ -6,7 +6,7 @@ import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom"
+} from "react-router-dom" 
 import Home from './pages/home/home.jsx'
 import CategoryPage from './pages/category/CategoryPage.jsx';
 import Search from './pages/Search.jsx';
@@ -15,6 +15,7 @@ import Recipes from './components/Recipes.jsx';
 import Resources from './components/Resources.jsx';
 import About from './pages/about/About.jsx';
 import Contacts from './pages/contact/Contacts.jsx';
+import SingleProduct from './pages/items/SingleProduct.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contacts />
+      },
+      {
+        path: "/items/:id",
+        element: <SingleProduct/>,
+        loader: ({params}) => fetch(`http://localhost:5000/api/items/${params.id}`)
       }
     ]
   },
