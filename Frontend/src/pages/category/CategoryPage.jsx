@@ -15,7 +15,7 @@ const CategoryPage = () => {
             setLoading(true);
             try{
                 const response= await axios.get(`http://localhost:5000/api/categories/${category}`);
-                setItems(response.data.items);
+                setItems(response.data);
             }catch(error){
                 setError(error.message || "Error loading category");
             }

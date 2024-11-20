@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { GoClock } from "react-icons/go";
 
 const Card = ({item}) => {
-    console.log(item)
     const categoryStyles = {
         Entrees: {backgroundColor: '#f0f5c4' , color:'#59871f'},
         Breakfast: {backgroundColor: '#efedfa' , color:'#3c3a8f'},
