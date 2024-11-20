@@ -44,22 +44,23 @@ const AddRecipe = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="Recipe Name" onChange={handleChange} required />
-            <input type="text" name="category" placeholder="Category" onChange={handleChange} required />
-            <textarea name="instructions" placeholder="Instructions" onChange={handleChange} required></textarea>
+        <form onSubmit={handleSubmit} className='mt-10'>
+            <input type="text" name="name" placeholder="Recipe Name" onChange={handleChange} required /><br/><br/>
+            <input type="text" name="category" placeholder="Category" onChange={handleChange} required /><br/><br/>
+            <textarea name="instructions" placeholder="Instructions" onChange={handleChange} required>
+            </textarea><br/><br/>
             {recipe.ingredients.map((ingredient, index) => (
                 <div key={index}>
-                    <input type="text" name="name" placeholder="Ingredient Name" onChange={(e) => handleIngredientChange(index, e)} required />
-                    <input type="text" name="quantity" placeholder="Quantity" onChange={(e) => handleIngredientChange(index, e)} required />
+                    <input type="text" name="name" placeholder="Ingredient Name" onChange={(e) => handleIngredientChange(index, e)} required /><br/>
+                    <input type="text" name="quantity" placeholder="Quantity" onChange={(e) => handleIngredientChange(index, e)} required /><br/>
                 </div>
             ))}
-            <button type="button" onClick={addIngredient}>Add Ingredient</button>
-            <input type="text" name="prep_time" placeholder="Preparation Time " onChange={handleChange} />
-            <input type="text" name="cooking_time" placeholder="Cooking Time" onChange={handleChange} />
-            <input type="text" name="serving" placeholder="Serving" onChange={handleChange} />
-            <input type="text" name="difficulty" placeholder="Difficulty" onChange={handleChange} />
-            <input type="text" name="source" placeholder="Source" onChange={handleChange} />
+            <button type="button" onClick={addIngredient}>Add Ingredient</button><br/><br/>
+            <input type="text" name="prep_time" placeholder="Preparation Time " onChange={handleChange} /><br/><br/>
+            <input type="text" name="cooking_time" placeholder="Cooking Time" onChange={handleChange} /><br/><br/>
+            <input type="text" name="serving" placeholder="Serving" onChange={handleChange} /><br/><br/>
+            <input type="text" name="difficulty" placeholder="Difficulty" onChange={handleChange} /><br/><br/>
+            <input type="text" name="source" placeholder="Source" onChange={handleChange} /><br/><br/>
             <button type="submit">Add Recipe</button>
         </form>
     );

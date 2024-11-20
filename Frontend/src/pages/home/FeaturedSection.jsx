@@ -16,15 +16,8 @@ const FeaturedSection = () => {
           euismod morbi ullamcorper rutrum. Orci tomorrow in phasellus
           ultricies.
         </p>
-        <div className="lg:mt-0 lg:flex-shrink-0">
-          <div className='mt-12 inline-flex'>
-            <button className="py-4 px-8 hover:bg-btnColor text-secondary hover:text-white w-full transition ease-in duration-200 text-center text-base font-semibold border border-[#9c702a] focus:outline-none rounded-lg">
-              View Recipe 
-            </button>
-          </div>
-        </div>
       </div>
-      </div>
+    </div>
   )
 }
 

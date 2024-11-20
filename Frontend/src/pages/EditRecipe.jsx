@@ -43,9 +43,9 @@ const EditRecipe = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" name="name" value={recipe.name} onChange={handleChange} required />
-            <input type="text" name="category" value={recipe.category} onChange={handleChange} required />
-            <textarea name="instructions" value={recipe.instructions} onChange={handleChange} required></textarea>
+            <input type="text" name="name" value={recipe.name} onChange={handleChange} required /><br/><br/>
+            <input type="text" name="category" value={recipe.category} onChange={handleChange} required /><br/><br/>
+            <textarea name="instructions" value={recipe.instructions} onChange={handleChange} required></textarea><br/><br/>
             {/* Add fields for ingredients, prep time, etc. */}
             <button type="submit">Update Recipe</button>
         </form>
