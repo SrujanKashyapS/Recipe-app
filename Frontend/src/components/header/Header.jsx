@@ -1,32 +1,28 @@
-import React, { useState } from 'react'
-import DesktopNav from './DesktopNav'
-import MobileNav from './MobileNav'
-import logo from '/logo.svg'
+import React from 'react';
+import logo from '/logo.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const [hideLeft, setHideLeft] = useState("-left-[1000px]");
-    const menuItems = ["recipes","resources","about","contact"];
+    return (
+        <div className="flex justify-between items-center p-4 bg-primary">
+            <Link to="/">
+                <img src={logo} alt="logo" className="h-10" />
+            </Link>
+            <div className="flex items-center gap-4">
+                <Link to="/add-recipe">
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        Add New Recipe
+                    </button>
+                </Link>
+                <Link to="/login">
+                    <button className="text-secondary px-4 py-2 rounded">Log In</button>
+                </Link>
+                <Link to="/signup">
+                    <button className="text-secondary px-4 py-2 rounded">Sign Up</button>
+                </Link>
+            </div>
+        </div>
+    );
+};
 
-    const onOpen = () => {
-        setHideLeft("left-0");
-    }
-    const onClose = () => {
-        setHideLeft("-left-[1000px]");
-    }
-  return (
-    <>
-    <div className='max-[900px]:hidden'><DesktopNav menuItems={menuItems} logo={logo}/></div>
-    <div className='min-[900px]:hidden'>
-      <MobileNav
-        menuItems={menuItems}
-        logo={logo}
-        onClose={onClose}
-        hideLeft={hideLeft}
-        onOpen={onOpen}
-      />
-      </div>
-    </>
-  )
-}
-
-export default Header
+export default Header;

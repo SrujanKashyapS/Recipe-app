@@ -15,8 +15,11 @@ import Resources from './components/Resources.jsx';
 import About from './pages/about/About.jsx';
 import Contacts from './pages/contact/Contacts.jsx';
 import SingleProduct from './pages/items/SingleProduct.jsx';
-import Signup from './pages/auth/Signup.jsx'; // Import Signup component
-import Login from './pages/auth/Login.jsx';   // Import Login component
+import Signup from './pages/auth/Signup.jsx';
+import Login from './pages/auth/Login.jsx';
+import AddRecipe from './pages/AddRecipe.jsx'; // Import AddRecipe component
+import RecipeList from './pages/RecipeList.jsx'; // Import RecipeList component
+import EditRecipe from './pages/EditRecipe.jsx'; // Import EditRecipe component
 
 const router = createBrowserRouter([
     {
@@ -58,12 +61,24 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/api/items/${params.id}`)
             },
             {
-                path: "/signup", // Add signup route
+                path: "/signup",
                 element: <Signup />
             },
             {
-                path: "/login", // Add login route
+                path: "/login",
                 element: <Login />
+            },
+            {
+                path: "/add-recipe", // Add route for adding recipes
+                element: <AddRecipe />
+            },
+            {
+                path: "/my-recipes", // Add route for listing recipes
+                element: <RecipeList />
+            },
+            {
+                path: "/edit-recipe/:id", // Add route for editing recipes
+                element: <EditRecipe />
             }
         ]
     },
