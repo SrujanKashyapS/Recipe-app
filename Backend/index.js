@@ -3,6 +3,9 @@ const app = express()
 const cors = require('cors');
 const mongoose = require('mongoose');
 const port = process.env.PORT || 5000;
+const userRoutes = require('./src/routes/userRoutes');
+
+app.use('/api/users', userRoutes);
 
 //suhastatte17
 //c99HVXv2hsg1a4UQ
